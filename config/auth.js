@@ -9,7 +9,7 @@ module.exports = (req, res, next) => {
 
   try {
     const token = authHeader.split(" ")[1];
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(token, process.env.JWT_SECRET || "6Y6UYUYUYYUYSGg");
     req.user = decoded;
 
     next();
@@ -17,11 +17,3 @@ module.exports = (req, res, next) => {
     res.status(401).json({ message: "Invalid token" });
   }
 };
-
-// middleware/authorizeRegistrar.js
-// module.exports = (req, res, next) => {
-//   if (!req.user || !req.user.roles.includes("registrar")) {
-//     return res.status(403).json({ message: "Registrar access required" });
-//   }
-//   next();
-// };
