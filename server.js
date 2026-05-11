@@ -34,7 +34,7 @@ io.use((socket, next) => {
 
   try {
     const jwt = require('jsonwebtoken');
-    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'your-secret-key');
+    const decoded = jwt.verify(token, process.env.JWT_SECRET || '6Y6UYUYUYYUYSGg');
     socket.userId = decoded.userId;
     socket.role = decoded.role;
     socket.name = decoded.name;

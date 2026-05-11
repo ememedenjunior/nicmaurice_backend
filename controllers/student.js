@@ -37,7 +37,7 @@ exports.loginStudent = async (req, res) => {
         role: "student",
         studentId: student.studentId
       },
-      process.env.JWT_SECRET,
+      process.env.JWT_SECRET || "6Y6UYUYUYYUYSGg",
       { expiresIn: "7d" }
     );
 
