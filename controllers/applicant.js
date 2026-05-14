@@ -27,7 +27,7 @@ exports.apply = async (req, res) => {
       intakeYear,
     } = req.body;
 
-    Console.log(req.body)
+    console.log(req.body)
 
     if (!firstName || !lastName || !email || !programAppliedFor) {
       return res.status(400).json({
