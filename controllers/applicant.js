@@ -61,7 +61,7 @@ exports.apply = async (req, res) => {
     });
 
     // Verification link
-    const verifyUrl = `${process.env.BACKEND_URL}/applicant/verify-email/${token}`;
+    const verifyUrl = `https://nicmauricebackend-production.up.railway.app/applicant/verify-email/${token}`;
 
     // Send email
     await sendEmail({
@@ -269,7 +269,7 @@ exports.confirmAdmission = async (req, res) => {
 
         <p>Please log in and change your password immediately.</p>
 
-        <a href="${process.env.FRONTEND_URL}/academy/login">
+        <a href="nicmauricecolleges/academy/login">
           Login to Student Portal
         </a>
 
