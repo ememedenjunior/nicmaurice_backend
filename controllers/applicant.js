@@ -27,6 +27,8 @@ exports.apply = async (req, res) => {
       intakeYear,
     } = req.body;
 
+    Console.log(req.body)
+
     if (!firstName || !lastName || !email || !programAppliedFor) {
       return res.status(400).json({
         message: "Missing required application fields",
